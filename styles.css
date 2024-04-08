@@ -3,17 +3,29 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-gradient{
-    background: linear-gradient(
-        180deg,
-        #ff6535 0%,
-        #ff9e48 48.9%,
-        #ffce58 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+.text-gradient {
+  background: linear-gradient(180deg,
+      #ff6535 0%,
+      #ff9e48 48.9%,
+      #ffce58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.bg-gradient{
-        background: linear-gradient(180deg,#ff6535 0%,#ff9e48 48.9%,#ffce58 100%)
+.bg-gradient {
+  background: linear-gradient(180deg, #ff6535 0%, #ff9e48 48.9%, #ffce58 100%)
+}
+
+
+@media only screen and (max-width: 639px) {
+  .bg-gradient {
+    background: none;
+  }
+  
+  .text-gradient {
+    background: none;
+  }
+  .sign_in_bg {
+    background-image: url("img/bg.png");
+  }
 }
