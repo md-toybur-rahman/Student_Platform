@@ -8,48 +8,67 @@
   <link rel="stylesheet" href="./dist/output.css" />
 </head>
 
-<body class="font-primary">
+<body class="font-primary max-w-[1440px] mx-auto min-h-[100vh]">
   <section>
-    <div>
-      <div class="bg-contain bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full sm:max-w-md"
+    <nav
+      class="hidden sm:flex flex-wrap md:gap-10 items-center justify-center lg:justify-between h-[96px] w-full bg-gradient px-5 lg:px-[72px]">
+      <div class="hidden lg:block">
+        <img class="w-[308px]" src="./img/logo.png" alt="logo" />
+      </div>
+      <div class="flex items-center justify-center gap-8">
+        <img src="img/desktop_search_icon.png" alt="">
+        <img src="img/desktop_calander_icon.png" alt="">
+        <img src="img/desktop_chat_icon.png" alt="">
+        <img src="img/desktop_group_icon.png" alt="">
+        <img src="img/desktop_profile_icon.png" alt="">
+        <img src="img/desktop_notificaiton_icon.png" alt="">
+        <img src="img/desktop_logout_icon.png" alt="">
+      </div>
+    </nav>
+    <div class="">
+      <div class="sm:hidden bg-contain bg-cover bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full"
         style="background-image: url('./img/background-2.png')">
         <div class="flex justify-center items-center pt-[52px]">
           <img src="./img/logo.png" alt="logo" />
         </div>
       </div>
-      <div class="sm:mx-auto sm:w-full sm:max-w-[480px] mb-8">
+      <div class="sm:mx-auto sm:w-full sm:max-w-[1296px] sm:px-5 mb-8">
         <!-- component -->
-        <div class="mt-[-120px]">
-          <div class="flex flex-col justify-center items-center mb-4">
-            <img src="./img/Vector (1).png" alt="" />
-            <h1 class="font-semibold text-2xl text-[#585858]">Name</h1>
-            <p class="text-[#afafaf] text-sm font-normal">Student</p>
-          </div>
-          <div class="flex items-center justify-center px-12">
-            <button type="submit" class="mr-3 bg-gradient rounded-full text-white py-2 px-4 w-full">
-              Go to detailed search
-            </button>
-
-          </div>
-          <div class="flex flex-row gap-2 items-center justify-center px-12 mt-4 pb-9 shadow-md rounded-b-full">
-            <form action="#" method="POST" class="w-full">
-              <div>
-                <div class="relative mt-1 ">
-                  <div class="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
-                    <img src="./img/sarch.png" alt="" />
-                  </div>
-                  <input type="text" class="pl-10 pr-4 py-3 border border-[#585858] text-sm w-full rounded-full"
-                    placeholder="Search by name" />
-                </div>
+        <div class="mt-[-80px] sm:mt-0 md:grid grid-cols-3 gap-4 sm:min-h-[85vh] sm:py-[55px]">
+          <div class="h-full sm:rounded-[25px] sm:shadow-md min-h-full sm:flex justify-center items-start pt-5 sm:pb-5 md:pb-0">
+            <div class="sm:rounded-[50px] sm:shadow-md sm:w-7/12 md:w-11/12 sm:border-2 sm:h-[352px] sm:border-orange-500 sm:flex flex-col items-center justify-center sm:px-3 lg:px-8">
+              <div class="flex flex-col justify-center items-center mb-4">
+                <img src="./img/Vector (1).png" alt="" />
+                <h1 class="font-semibold text-2xl text-[#585858]">Name</h1>
+                <p class="text-[#afafaf] text-sm font-normal">Student</p>
               </div>
+              <div class="sm:flex items-center justify-center sm:w-full px-8 sm:px-0">
+                <button type="submit" class="mr-3 sm:mr-0 bg-gradient rounded-full text-white py-2 px-4 w-full">
+                  Go to detailed search
+                </button>
+              </div>
+              <div
+                class="flex flex-row gap-2 items-center justify-center mt-4 pb-9 shadow-md px-8 sm:px-0 sm:shadow-none rounded-b-[50px] sm:rounded-b-none w-full">
+                <form action="#" method="POST" class="w-full">
+                  <div>
+                    <div class="relative mt-1 ">
+                      <div class="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
+                        <img src="./img/sarch.png" alt="" />
+                      </div>
+                      <input type="text" class="pl-10 pr-4 py-3 border border-[#585858] text-sm w-full rounded-full"
+                        placeholder="Search by name" />
+                    </div>
+                  </div>
 
-            </form>
-            <button type="submit" class="mr-3 bg-gradient rounded-full text-white py-3 px-4 w-2/12">
-              Go
-            </button>
+                </form>
+                <button type="submit" class="mr-3 bg-gradient rounded-full text-white py-3 px-4 w-2/12 sm:w-4/12">
+                  Go
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="px-3">
-            <h1 class="mt-5 mb-4 font-semibold text-[#585858] text-sm pl-5">
+          <div class="px-3 col-span-2 sm:h-full sm:rounded-[25px] sm:shadow-md min-h-full">
+            <h1 class="mt-5 mb-4 font-semibold text-[#585858] text-sm sm:text-xl pl-5">
               Suggested for you:
             </h1>
             <div>
@@ -58,10 +77,10 @@
                 <div class="flex items-center  items-center gap-2  ">
                   <img src="./img/454.png" alt="" />
                   <div class="">
-                    <h1 class="font-semibold text-[#585858] text-sm">
+                    <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
                       Teacher’s name
                     </h1>
-                    <p class="font-normal text-[11px] text-[#585858]">
+                    <p class="font-normal text-[11px] sm:text-[15px] text-[#585858]">
                       Horem ipsum dolor sit amet, <br />
                       consectetur adipiscing elit. Nunc <br />
                       vulputate libero
@@ -90,10 +109,10 @@
                 <div class="flex items-center  items-center gap-2  ">
                   <img src="./img/454.png" alt="" />
                   <div class="">
-                    <h1 class="font-semibold text-[#585858] text-sm">
+                    <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
                       Teacher’s name
                     </h1>
-                    <p class="font-normal text-[11px] text-[#585858]">
+                    <p class="font-normal text-[11px] sm:text-[15px] text-[#585858]">
                       Horem ipsum dolor sit amet, <br />
                       consectetur adipiscing elit. Nunc <br />
                       vulputate libero
@@ -122,10 +141,10 @@
                 <div class="flex items-center  items-center gap-2  ">
                   <img src="./img/454.png" alt="" />
                   <div class="">
-                    <h1 class="font-semibold text-[#585858] text-sm">
+                    <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
                       Teacher’s name
                     </h1>
-                    <p class="font-normal text-[11px] text-[#585858]">
+                    <p class="font-normal text-[11px] sm:text-[15px] text-[#585858]">
                       Horem ipsum dolor sit amet, <br />
                       consectetur adipiscing elit. Nunc <br />
                       vulputate libero
@@ -150,14 +169,7 @@
                 </div>
               </div>
             </div>
-            <div style="
-                  background: linear-gradient(
-                    180deg,
-                    #ff6535 0%,
-                    #ff9e48 48.9%,
-                    #ffce58 100%
-                  );
-                " class="py-[10px] rounded-full mx-4 mb-6">
+            <div class="sm:hidden py-[10px] rounded-full mx-4 mb-6 bg-gradient">
               <div class="flex items-center justify-between px-[50px]">
                 <img src="./img/search-active.png" alt="">
                 <img src="./img/4.png" alt="" />
