@@ -13,16 +13,15 @@
 }
 
 .bg-gradient {
-  background: linear-gradient(180deg, #ff6535 0%, #ff9e48 48.9%, #ffce58 100%)
+  background: linear-gradient(180deg, #ff6535 0%, #ff9e48 48.9%, #ffce58 100%);
 }
 
+.login_in_header_bg{
+  background: linear-gradient(180deg, #ff6535 0%, #ff9e48 48.9%, #ffce58 100%);
+}
 
 @media only screen and (max-width: 639px) {
-  .bg-gradient {
-    background: none;
-  }
-  
-  .text-gradient {
+  .login_in_header_bg{
     background: none;
   }
   .index_bg {

@@ -1,89 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verify email address</title>
-    <link rel="stylesheet" href="./dist/output.css" />
-  </head>
-  <body class="font-primary">
-    <section>
-      <div class="h-screen">
-        <div
-          class="bg-contain bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full sm:max-w-md max-[415px]:bg-cover"
-          style="background-image: url('./img/background-2.png')"
-        >
-          <div class="pl-9 pt-16 max-w-[433px]">
-            <img src="./img/logo.png" alt="logo" />
-            <div class="pt-8 text-white">
-              <h1 class="text-2xl font-medium">Verify email address</h1>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify email address</title>
+  <link rel="stylesheet" href="./dist/output.css" />
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="font-primary min-w-[350px]">
+  <section class="sm:h-[100vh] sm:w-full sm:flex items-center justify-center sm:px-5">
+    <div class="sm:grid grid-cols-2 sm:h-[688px] sm:mx-auto max-w-2xl sm:max-w-[1080px] sm:shadow-md sm:rounded-[50px]">
+      <div class="sm:hidden bg-cover bg-right-bottom bg-no-repeat h-[320px] sm:mx-auto sm:w-full sm:max-w-md"
+        style="background-image: url('./img/background.png')">
+        <div class="pl-9 pt-16 max-w-[433px]">
+          <img src="./img/logo.png" alt="logo" />
+          <div class="pt-4 text-white">
+            <h1 class="text-2xl font-medium">Verify email address</h1>
           </div>
         </div>
+      </div>
 
+      <div class="bg-gradient sm:h-full hidden sm:flex flex-col justify-center items-center sm:rounded-s-[50px]">
+        <div class="flex justify-center items-center mx-auto w-full">
+          <img src="./img/logo.png" alt="logo" class="sm:hidden pt-5 w-6/12">
+          <img src="./img/desktop_logo.svg" alt="logo" class="hidden sm:block w-10/12">
+        </div>
+        <div class="pt-4 sm:pt-[50px] md:pt-[100px] lg:pt-[136px]">
+          <h3 class="text-center text-white text-lg md:text-2xl font-semibold">
+            Start your journey to the
+          </h3>
+          <h3 class="text-center text-white text-lg md:text-2xl font-semibold pb-6">
+            world of learning.
+          </h3>
+        </div>
+      </div>
+
+      <div class=" mt-[135px] sm:mt-0 sm:flex sm:flex-col items-center justify-center" id="msg">
+        <h1 class="hidden sm:block text-[40px] mb-8 font-semibold text-gradient text-center">Verify Email</h1>
         <div
-          class="flex px-5 items-center justify-evenly text-[15px] text-[#afafaf]" id="msg"
-        >
-          <div>
-            When you click on the verify button, you will receive an OTP that
-            will help us to verify your email address.
+          class="flex sm:flex-col sm:shadow-md sm:rounded-[25px] sm:h-[400px] sm:w-10/12 items-center gap-4 sm:gap-10 justify-evenly sm:justify-center text-[15px] sm:text-[24px] sm:text-center text-[#afafaf] w-[349px] mx-auto px-3 sm:px-0">
+          <div class="w-[234px] sm:w-11/12">
+            <p class="w-full">When you click on the verify button, you will receive an OTP that
+              will help us to verify your email address.</p>
           </div>
-          <button
-            onclick="set_visible()"
-            class="bg-gradient text-white rounded-full px-3 py-1 justify-end cursor-pointer"
-          >
+          <button onclick="set_visible()"
+            class="bg-gradient text-white text-[17px] font-medium rounded-full px-[29px] py-[14px] justify-end cursor-pointer">
             Verify
           </button>
         </div>
-        <div class="px-5 hidden" id="otp">
-          <div class="mb-7 text-[15px] text-[#afafaf]">
-            We have sent an OTP to pqr@gmail.com. Please enter it below to
-            verify your email address.
-          </div>
-          <div class="mb-5 flex justify-center">
-            <input
-              id="otp-input-1"
-              type="text"
-              maxlength="1"
-              class="w-[40px] mr-3 px-3 py-2 border border-[#afafaf] border-1 rounded-xl"
-            />
-            <input
-              id="otp-input-2"
-              type="text"
-              maxlength="1"
-              class="w-[40px] mr-3 px-3 py-2 border border-[#afafaf] border-1 rounded-xl"
-            />
-            <input
-              id="otp-input-3"
-              type="text"
-              maxlength="1"
-              class="w-[40px] mr-3 px-3 py-2 border border-[#afafaf] border-1 rounded-xl"
-            />
-            <input
-              id="otp-input-4"
-              type="text"
-              maxlength="1"
-              class="w-[40px] mr-3 px-3 py-2 border border-[#afafaf] border-1 rounded-xl"
-            />
-          </div>
-        </div>
-        <div class="w-full absolute bottom-10 justify-between px-3 hidden" id="submit-btn">
-          <button class="bg-slate-300 px-4 py-2 text-[#585858] rounded-full ml-5">
-            Cancel
-          </button>
+      </div>
+      <div class="hidden mt-[55px] sm:mt-0 items-center justify-center mx-auto" id="otp">
+        <div>
+          <h1 class="hidden sm:block text-[40px] mb-8 font-semibold text-gradient text-center">Verify Email</h1>
+          <div
+            class="sm:flex sm:flex-col sm:shadow-md sm:rounded-[25px] sm:h-[400px] sm:w-10/12 items-center gap-4 sm:gap-10 justify-evenly sm:justify-center text-[15px] lg:text-[24px] sm:text-center text-[#afafaf] mx-auto px-5">
+            <div class="mb-7 sm:mb-5 flex justify-center">
+              <p class="text-[#afafaf] sm:leading-[25px]">We have sent an OTP to pqr@gmail.com. Please enter it below to
+                verify your email address.</p>
+            </div>
+            <div class="mb-5 sm:mb-3 mr-0 flex gap-3 justify-center">
+              <input id="otp-input-1" type="text" maxlength="1"
+                class="w-[48px] md:w-[64px] text-center px-3 py-3 border border-[#afafaf] border-1 rounded-xl" />
+              <input id="otp-input-2" type="text" maxlength="1"
+                class="w-[48px] md:w-[64px] text-center px-3 py-2 border border-[#afafaf] border-1 rounded-xl" />
+              <input id="otp-input-3" type="text" maxlength="1"
+                class="w-[48px] md:w-[64px] text-center px-3 py-2 border border-[#afafaf] border-1 rounded-xl" />
+              <input id="otp-input-4" type="text" maxlength="1"
+                class="w-[48px] md:w-[64px] text-center px-3 py-2 border border-[#afafaf] border-1 rounded-xl" />
+            </div>
+            <div class="absolute sm:static bottom-10 left-0 right-0 justify-between gap-[88px] sm:gap-5 md:gap-8 px-3 hidden"
+              id="submit-btn">
+              <button class="bg-slate-300 px-4 md:px-10 py-2 text-[#585858] rounded-full ml-5 sm:ml-0">
+                Cancel
+              </button>
 
-          <button class="bg-gradient px-4 py-2 text-white rounded-full mr-4">
-            Submit
-          </button>
+              <button class="bg-gradient px-4 md:px-10 py-2 text-white rounded-full mr-4 sm:mr-0">
+                Submit
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <script>
-      function set_visible() {
-        document.getElementById("otp").style.display = "block";
-        document.getElementById("submit-btn").style.display = "flex";
-        document.getElementById("msg").style.display = "none";
-      }
-    </script>
-  </body>
+    </div>
+  </section>
+  <script>
+    function set_visible() {
+      document.getElementById("otp").style.display = "flex";
+      document.getElementById("submit-btn").style.display = "flex";
+      document.getElementById("msg").style.display = "none";
+    }
+  </script>
+</body>
+
 </html>
