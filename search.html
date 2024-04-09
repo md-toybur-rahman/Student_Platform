@@ -11,18 +11,20 @@
 <body class="font-primary max-w-[1440px] mx-auto min-h-[100vh]">
   <section>
     <nav
-      class="hidden sm:flex flex-wrap md:gap-10 items-center justify-center lg:justify-between h-[96px] w-full bg-gradient px-5 lg:px-[72px]">
-      <div class="hidden lg:block">
-        <img class="w-[308px]" src="./img/logo.png" alt="logo" />
-      </div>
-      <div class="flex items-center justify-center gap-8">
-        <img src="img/desktop_search_icon.png" alt="">
-        <img src="img/desktop_calander_icon.png" alt="">
-        <img src="img/desktop_chat_icon.png" alt="">
-        <img src="img/desktop_group_icon.png" alt="">
-        <img src="img/desktop_profile_icon.png" alt="">
-        <img src="img/desktop_notificaiton_icon.png" alt="">
-        <img src="img/desktop_logout_icon.png" alt="">
+      class="hidden sm:flex items-center justify-center h-[96px] w-full bg-gradient px-5 lg:px-[72px]">
+      <div class="w-full max-w-[1300px] mx-auto sm:flex flex-wrap md:gap-10 items-center justify-center lg:justify-between">
+        <div class="hidden lg:block">
+          <img class="w-[308px]" src="./img/logo.png" alt="logo" />
+        </div>
+        <div class="flex items-center justify-center gap-8">
+          <img src="img/desktop_search_icon.png" alt="">
+          <img src="img/desktop_calander_icon.png" alt="">
+          <img src="img/desktop_chat_icon.png" alt="">
+          <img src="img/desktop_group_icon.png" alt="">
+          <img src="img/desktop_profile_icon.png" alt="">
+          <img src="img/desktop_notificaiton_icon.png" alt="">
+          <img src="img/desktop_logout_icon.png" alt="">
+        </div>
       </div>
     </nav>
     <div>
@@ -148,20 +150,24 @@
                 </div>
               </div>
             </div>
-            <div class="text-[14px] mx-6 my-4 font-semibold text-[#585858]">
+            <div class="text-[14px] sm:text-[20px] mx-6 my-4 font-semibold text-[#585858]">
               Search results :
             </div>
-            <div class="overflow-y-auto" style="max-height: calc(100vh - 200px);">
+            <div class="hidden sm:flex flex-col items-center justify-center gap-5 mt-[56px]">
+              <img src="img/no_result_icon.png" alt="">
+              <h1 class="text-[23px] font-medium text-[#585858] text-center">Sorry no matching results found. <br>Try something else.</h1>
+            </div>
+            <div class="overflow-y-auto sm:hidden" style="max-height: calc(100vh - 200px);">
 
               <div
                 class="flex flex-row justify-between shadow-md rounded-full mx-[6px] pl-[10px] py-[10px] px-4 relative z-5 mb-2">
                 <div class="flex items-center  items-center gap-2  ">
                   <img src="./img/454.png" alt="" />
                   <div class="">
-                    <h1 class="font-semibold text-[#585858] text-sm">
+                    <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
                       Teacher’s name
                     </h1>
-                    <p class="font-normal text-[11px] text-[#585858]">
+                    <p class="font-normal text-[11px] sm:text-sm text-[#585858]">
                       Horem ipsum dolor sit amet, <br />
                       consectetur adipiscing elit. Nunc <br />
                       vulputate libero
@@ -190,10 +196,10 @@
                 <div class="flex items-center  items-center gap-2  ">
                   <img src="./img/454.png" alt="" />
                   <div class="">
-                    <h1 class="font-semibold text-[#585858] text-sm">
+                    <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
                       Teacher’s name
                     </h1>
-                    <p class="font-normal text-[11px] text-[#585858]">
+                    <p class="font-normal text-[11px] sm:text-sm text-[#585858]">
                       Horem ipsum dolor sit amet, <br />
                       consectetur adipiscing elit. Nunc <br />
                       vulputate libero
@@ -222,10 +228,10 @@
                 <div class="flex items-center  items-center gap-2  ">
                   <img src="./img/454.png" alt="" />
                   <div class="">
-                    <h1 class="font-semibold text-[#585858] text-sm">
+                    <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
                       Teacher’s name
                     </h1>
-                    <p class="font-normal text-[11px] text-[#585858]">
+                    <p class="font-normal text-[11px] sm:text-sm text-[#585858]">
                       Horem ipsum dolor sit amet, <br />
                       consectetur adipiscing elit. Nunc <br />
                       vulputate libero

@@ -23,10 +23,27 @@
   </style>
 </head>
 
-<body class="font-primary">
+<body class="font-primary min-h-[100vh]">
   <section>
+    <nav
+      class="hidden sm:flex items-center justify-center h-[96px] w-full bg-gradient px-5 lg:px-[72px]">
+      <div class="w-full max-w-[1300px] mx-auto sm:flex flex-wrap md:gap-10 items-center justify-center lg:justify-between">
+        <div class="hidden lg:block">
+          <img class="w-[308px]" src="./img/logo.png" alt="logo" />
+        </div>
+        <div class="flex items-center justify-center gap-8">
+          <img src="img/desktop_search_icon.png" alt="">
+          <img src="img/desktop_calander_icon.png" alt="">
+          <img src="img/desktop_chat_icon.png" alt="">
+          <img src="img/desktop_group_icon.png" alt="">
+          <img src="img/desktop_profile_icon.png" alt="">
+          <img src="img/desktop_notificaiton_icon.png" alt="">
+          <img src="img/desktop_logout_icon.png" alt="">
+        </div>
+      </div>
+    </nav>
     <div>
-      <div class="bg-contain bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full sm:max-w-md"
+      <div class="sm:hidden bg-contain bg-cover bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full sm:max-w-md"
         style="background-image: url('./img/background-2.png')">
         <div class="flex justify-center items-center pt-[52px]">
           <img src="./img/logo.png" alt="logo" />
@@ -34,9 +51,9 @@
       </div>
 
       <div id="myModal" class="modal">
-        <div class="flex items-center justify-center mt-[100px]">
+        <div class="flex items-center justify-center mt-[100px] sm:px-5">
           <div
-            class="relative transform overflow-hidden rounded-3xl bg-white px-4 pb-4 pt-5 text-left shadow-2xl  sm:my-8 sm:w-full sm:max-w-lg sm:p-6 z-50">
+            class="relative transform overflow-hidden rounded-3xl bg-white px-4 pb-4 pt-5 text-left shadow-2xl  sm:my-8  sm:w-full sm:max-w-[791px] sm:p-6 z-50">
             <div class="absolute right-0 top-0 pr-4 pt-4 sm:block">
               <button type="button" class="  ">
 
@@ -44,13 +61,21 @@
               </button>
             </div>
             <div>
-              <img src="./img/wom.png" alt="" class="flex justify-center mx-auto">
-              <h1 class="text-center font-semibold text-2xl text-[#585858]">Teacher’s name</h1>
-              <p class="text-center  font-normal text-[11px] text-[#585858] max-w-[257px] mx-auto pb-5">Horem ipsum
-                dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio
-                mattis. Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
-                interdum, ac aliquet odio mattis. </p>
-              <div class="flex items-center justify-center">
+              <div class="sm:flex gap-4 items-center">
+                <img src="./img/wom.png" alt="" class="flex justify-center mx-auto sm:mx-0">
+                <div class="flex-grow">
+                  <h1 class="text-center sm:text-start font-semibold text-2xl sm:text-3xl text-[#585858]">Teacher’s name
+                  </h1>
+                  <p
+                    class="text-center sm:text-start font-normal text-[11px] sm:text-[15px] text-[#585858] max-w-[257px] sm:max-w-full mx-auto pb-5">
+                    Horem
+                    ipsum
+                    dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                    aliquet odio
+                    mattis.</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-center mt-5">
                 <button><img src="./img/button Book a call.png" alt=""></button>
                 <button><img src="./img/Rating.png" alt=""></button>
               </div>
@@ -62,7 +87,7 @@
           </div>
         </div>
       </div>
-      <div class="sm:mx-auto sm:w-full sm:max-w-[480px] mb-8 relative">
+      <div class="opacity-50 sm:mx-auto sm:w-full  sm:max-w-[1296px] sm:px-5 mb-8 relative">
         <!-- <div class="fixed inset-0 bg-white  top-[180px]"></div> -->
         <!-- 
   <div class="fixed inset-0 z-50 w-screen overflow-y-auto">
@@ -93,137 +118,166 @@
   </div> -->
 
         <!-- component -->
-        <div class="mt-[-98px]">
-          <div class="flex flex-col justify-center items-center mb-4">
-            <img src="./img/Vector (1).png" alt="" />
-            <h1 class="font-semibold text-2xl text-[#585858]">Name</h1>
-            <p class="text-[#afafaf] text-sm font-normal">Student</p>
-          </div>
-          <div class="flex items-center justify-center px-12">
-            <button type="submit" class="mr-3">
-              <img src="./img/button edit profile.png" alt="sign up button" />
-            </button>
-            <button>
-              <img src="/img/back.png" alt="" />
-            </button>
-          </div>
-          <div class="flex items-center justify-center px-12 mt-4 pb-9 shadow-md rounded-b-full">
-            <form action="#" method="POST" class="mr-12">
-              <div>
-                <div class="relative mt-1">
-                  <div class="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
-                    <img src="./img/sarch.png" alt="" />
-                  </div>
-                  <input type="text" class="pl-10 pr-4 py-3 border border-[#585858] text-sm w-full rounded-full"
-                    placeholder="Search" />
-                </div>
-              </div>
-            </form>
-            <button>
-              <img src="./img/vwell.png" alt="" />
-            </button>
-          </div>
-          <div class="px-3">
-            <h1 class="mt-5 mb-4 font-semibold text-[#585858] text-sm pl-5">
-              Suggested for you:
-            </h1>
-            <div>
+        <div class="sm:mx-auto sm:w-full  sm:max-w-[1296px] sm:px-5 mb-8">
+          <div class="mt-[-98px] sm:mt-0 md:grid grid-cols-3 gap-4 sm:min-h-screen sm:py-[55px]">
+            <div
+              class="flex sm:flex-col items-center justify-center sm:justify-start px-8 sm:px-0 mt-8 sm:mt-0 pb-9 sm:pb-0 shadow-md rounded-b-[25px] sm:pt-5">
               <div
-                class="opacity-50 flex items-center pl-[10px] py-[10px] px-4 justify-between shadow-md rounded-full mx-[6px] relative z-5 mb-2">
-                <img src="./img/454.png" alt="" />
-                <div class="">
-                  <h1 class="font-semibold text-[#585858] text-sm">
-                    Teacher’s name
-                  </h1>
-                  <p class="font-normal text-[11px] text-[#585858]">
-                    Horem ipsum dolor sit amet, <br />
-                    consectetur adipiscing elit. Nunc <br />
-                    vulputate libero
-                  </p>
+                class="sm:rounded-[50px] sm:shadow-md sm:w-7/12 md:w-11/12 sm:border-2 sm:h-fit lg:h-[281px] sm:border-orange-500 sm:flex flex-col items-center justify-center sm:px-3 lg:px-8 sm:py-5 sm:mb-5 md:mb-0">
+                <div class="flex flex-col justify-center items-center mb-4">
+                  <img src="./img/Vector (1).png" alt="" />
+                  <h1 class="font-semibold text-2xl text-[#585858]">Name</h1>
+                  <p class="text-[#afafaf] text-sm font-normal">Student</p>
                 </div>
-                <div class="flex flex-col justify-center items-center">
-                  <img src="./img/at.png" alt="" />
-                  <p class="font-medium text-[15px]" style="
-                        background: linear-gradient(
-                          180deg,
-                          #ff6535 0%,
-                          #ff9e48 48.9%,
-                          #ffce58 100%
-                        );
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                      ">
-                    5.0
-                  </p>
+                <div class="flex sm:hidden items-center justify-center px-12">
+                  <button type="submit" class="mr-3">
+                    <img src="./img/button edit profile.png" alt="sign up button" />
+                  </button>
+                  <button>
+                    <img src="/img/back.png" alt="" />
+                  </button>
                 </div>
-              </div>
-              <div
-                class="flex opacity-50  items-center pl-[10px] py-[10px] px-4 justify-between shadow-md rounded-full mx-[6px] relative z-50 mb-2">
-                <img src="./img/454.png" alt="" />
-                <div class="">
-                  <h1 class="font-semibold text-[#585858] text-sm">
-                    Teacher’s name
-                  </h1>
-                  <p class="font-normal text-[11px] text-[#585858]">
-                    Horem ipsum dolor sit amet, <br />
-                    consectetur adipiscing elit. Nunc <br />
-                    vulputate libero
-                  </p>
+                <div class="hidden sm:flex items-center justify-center sm:w-full px-8 sm:px-0">
+                  <button type="submit" class="mr-3 sm:mr-0 bg-gradient rounded-full text-white py-2 px-4 w-full">
+                    Go to detailed search
+                  </button>
                 </div>
-                <div class="flex flex-col justify-center items-center">
-                  <img src="./img/at.png" alt="" />
-                  <p class="font-medium text-[15px]" style="
-                        background: linear-gradient(
-                          180deg,
-                          #ff6535 0%,
-                          #ff9e48 48.9%,
-                          #ffce58 100%
-                        );
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                      ">
-                    5.0
-                  </p>
-                </div>
-              </div>
-              <div
-                class="flex opacity-50  items-center pl-[10px] py-[10px] px-4 justify-between shadow-md rounded-full mx-[6px] relative z-50 mb-2">
-                <img src="./img/454.png" alt="" />
-                <div class="">
-                  <h1 class="font-semibold text-[#585858] text-sm">
-                    Teacher’s name
-                  </h1>
-                  <p class="font-normal text-[11px] text-[#585858]">
-                    Horem ipsum dolor sit amet, <br />
-                    consectetur adipiscing elit. Nunc <br />
-                    vulputate libero
-                  </p>
-                </div>
-                <div class="flex flex-col justify-center items-center">
-                  <img src="./img/at.png" alt="" />
-                  <p class="font-medium text-[15px]" style="
-                        background: linear-gradient(
-                          180deg,
-                          #ff6535 0%,
-                          #ff9e48 48.9%,
-                          #ffce58 100%
-                        );
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                      ">
-                    5.0
-                  </p>
+                <div
+                  class="flex items-center justify-center px-12 sm:px-2 mt-4 pb-9 sm:pb-0 shadow-md sm:shadow-none rounded-b-[50px] sm:rounded-b-none">
+                  <form class="flex-col mr-3 items-center">
+                    <div class="flex gap-2 sm:flex-col lg:flex-row items-center">
+                      <div class="">
+                        <div class="relative mt-1">
+                          <div class="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
+                            <img src="./img/sarch.png" />
+                          </div>
+                          <input type="text" class="pl-10 pr-4 py-3 border border-[#585858] text-sm w-full rounded-full"
+                            placeholder="Search by name" />
+                        </div>
+                      </div>
+                      <button type="submit" class="hidden sm:block bg-gradient text-white rounded-full px-6 py-2">
+                        Go
+                      </button>
+                    </div>
+                  </form>
+                  <button class="sm:hidden">
+                    <img src="./img/vwell.png" alt="" />
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="relative mx-2 mt-5">
-              <img src="./img/student menu.png" alt="" class="w-full" />
-              <div class="flex items-center justify-between">
-                <img src="./img/4.png" alt="" class="absolute top-[25%] left-[15%]" />
-                <img src="./img/dis.png" class="absolute top-[25%] left-[35%]" alt="" />
-                <img src="./img/2.png" class="absolute top-[25%] left-[55%]" />
-                <img src="./img/ab.png" class="absolute top-[20%] left-[75%]" />
+            <div class="relative col-span-2">
+              <!-- <div id="myModal" class="modal absolute">
+                <div class="flex items-center justify-center mt-[100px] sm:mt-[20px]">
+                  <div
+                    class="relative transform overflow-hidden rounded-3xl bg-white px-4 pb-4 pt-5 text-left shadow-2xl  sm:my-8 sm:w-full sm:max-w-lg sm:p-6 z-50">
+                    <div class="absolute right-0 top-0 pr-4 pt-4 sm:block">
+                      <button type="button" class="  ">
+
+                        <img src="./img/x.png" alt="">
+                      </button>
+                    </div>
+                    <div>
+                      <img src="./img/wom.png" alt="" class="flex justify-center mx-auto">
+                      <h1 class="text-center font-semibold text-2xl text-[#585858]">Teacher’s name</h1>
+                      <p class="text-center  font-normal text-[11px] text-[#585858] max-w-[257px] mx-auto pb-5">Horem
+                        ipsum
+                        dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                        aliquet odio
+                        mattis. Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
+                        velit
+                        interdum, ac aliquet odio mattis. </p>
+                      <div class="flex items-center justify-center">
+                        <button><img src="./img/button Book a call.png" alt=""></button>
+                        <button><img src="./img/Rating.png" alt=""></button>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <button class="mr-1"><img src="./img/view profile button.png" alt=""></button>
+                        <button class="ml-1"><img src="./img/share button.png" alt=""></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+
+
+              <div class="opacity-50 px-3 col-span-2 sm:rounded-[25px] sm:shadow-md min-h-full sm:min-h-screen">
+                <h1 class="mt-5 mb-4 font-semibold text-[#585858] text-sm sm:text-xl pl-5">
+                  Suggested for you:
+                </h1>
+                <div>
+                  <div
+                    class="flex items-center pl-[10px] py-[10px] px-4 justify-between shadow-md rounded-full mx-[6px] relative z-5 mb-2">
+                    <img src="./img/454.png" alt="" />
+                    <div class="">
+                      <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
+                        Teacher’s name
+                      </h1>
+                      <p class="font-normal text-[11px] sm:text-[15px] text-[#585858]">
+                        Horem ipsum dolor sit amet, <br />
+                        consectetur adipiscing elit. Nunc <br />
+                        vulputate libero
+                      </p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                      <img src="./img/rating-5.png" alt="" />
+                      <p class="font-medium text-[15px] text-gradient">
+                        5.0
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex opacity-50  items-center pl-[10px] py-[10px] px-4 justify-between shadow-md rounded-full mx-[6px] relative z-50 mb-2">
+                    <img src="./img/454.png" alt="" />
+                    <div class="">
+                      <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
+                        Teacher’s name
+                      </h1>
+                      <p class="font-normal text-[11px] sm:text-[15px] text-[#585858]">
+                        Horem ipsum dolor sit amet, <br />
+                        consectetur adipiscing elit. Nunc <br />
+                        vulputate libero
+                      </p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                      <img src="./img/rating-5.png" alt="" />
+                      <p class="font-medium text-[15px] text-gradient">
+                        5.0
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex opacity-50  items-center pl-[10px] py-[10px] px-4 justify-between shadow-md rounded-full mx-[6px] relative z-50 mb-2">
+                    <img src="./img/454.png" alt="" />
+                    <div class="">
+                      <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
+                        Teacher’s name
+                      </h1>
+                      <p class="font-normal text-[11px] sm:text-[15px] text-[#585858]">
+                        Horem ipsum dolor sit amet, <br />
+                        consectetur adipiscing elit. Nunc <br />
+                        vulputate libero
+                      </p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                      <img src="./img/rating-5.png" alt="" />
+                      <p class="font-medium text-[15px] text-gradient">
+                        5.0
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+          </div>
+          <div class="sm:hidden relative mx-2 mt-5">
+            <img src="./img/student menu.png" alt="" class="w-full" />
+            <div class="flex items-center justify-between">
+              <img src="./img/4.png" alt="" class="absolute top-[25%] left-[15%]" />
+              <img src="./img/dis.png" class="absolute top-[25%] left-[35%]" alt="" />
+              <img src="./img/2.png" class="absolute top-[25%] left-[55%]" />
+              <img src="./img/ab.png" class="absolute top-[20%] left-[75%]" />
             </div>
           </div>
         </div>
