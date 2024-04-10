@@ -13,7 +13,11 @@ function displayCurrentWeek() {
 
     // Update the content of the h1 tag with the current month (full name)
     const monthHeaderElement = document.getElementById("month-header");
+    // new line by Toybur
+    const month_Header_Element = document.getElementById("month_header");
     monthHeaderElement.innerText = currentMonthFullName;
+    // new line by Toybur
+    month_Header_Element.innerText = currentMonthFullName;
 
     // Update the content of the short_date_form element with current date (short month name)
     const shortDateFormElement = document.getElementById("short_date_form");

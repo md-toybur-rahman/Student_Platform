@@ -17,7 +17,7 @@
   table {
     width: 80%;
     border-collapse: collapse;
-    margin-left: 28px;
+    /* margin-left: 28px; */
 
   }
 
@@ -320,7 +320,7 @@
 </style>
 
 <body class="font-primary min-h-[100vh]">
-  <section>
+  <section class="mb-20 sm:mb-0">
     <nav class="hidden sm:flex items-center justify-center h-[96px] w-full bg-gradient px-5 lg:px-[72px]">
       <div
         class="w-full max-w-[1300px] mx-auto sm:flex flex-wrap md:gap-10 items-center justify-center lg:justify-between">
@@ -338,121 +338,151 @@
         </div>
       </div>
     </nav>
-    <div>
-      <div class="sm:hidden bg-contain bg-cover bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full sm:max-w-md"
-        style="background-image: url('./img/background-2.png')">
-        <div class="flex justify-center items-center pt-[52px]">
-          <img src="img/logo.png" alt="logo" />
-        </div>
-      </div>
-      <div class="flex items-center justify-center gap-[68px] mt-[-65px] sm:mt-10 mb-[30px]">
-        <!-- style="display: flex; justify-content: center; align-items: center; gap:68px; margin-top: -65px;  margin-bottom: 30px;" -->
-        <span style="color: #AFAFAF; font-weight: 600;">Today</span>
-        <h1 id="month-header">Month</h1>
-
-      </div>
-    </div>
-    <div class="flex justify-center items-center ">
-
-
-      <div id="calendar" class="card shadow-md rounded-[50px] pb-5" style="width: 450px;">
-        <!-- Calendar content will be dynamically added here -->
-      </div>
-
-    </div>
-    <div class="flex justify-center mt-5">
-      <div class=" flex">
-        <button class="active" style="background: linear-gradient(
-              180deg,
-              #ff6535 0%,
-              #ff9e48 48.9%,
-              #ffce58 100%
-                );color: #fff;font-weight: 600;padding: 5px 30px; border-radius: 20px 0px 0px 20px;">Calls</button>
-        <button class="inactive"><span>Conferences</span></button>
-      </div>
-    </div>
-    <div class="flex flex-col items-start" style="margin-top: 20px;margin-left: 10%;">
-
-      <div id="short_date_form"></div>
-      <span style="font-size: 13px;color: #AFAFAF;">Daily Tasks</span>
-
-    </div>
-    <div class="flex justify-start" style="gap: 50px;margin-top: 10px; margin-left: 10%;">
-
-      <!-- <div class="flex justify-center items-center" style="gap:10px;">
-            <span style="color:#585858; font-size: 13px;">Share availability </span>
-            <i class="bi bi-reply-fill" style="transform: rotateY(180deg); color:#585858; font-size: 20px;"></i>
-          </div>-->
-    </div>
-    <div style="height: 450px;">
-      <!-- removed mrgin-left: -2%; -->
-      <div class="time_lines overflow-y-auto">
-        <div class="time_line ">
-          <div class="available_time"> 8:00 </div>
-          <hr />
-        </div>
-        <div class="time_line booked_time">
-          <div class="available_time"> 9:00 </div>
-          <hr />
-        </div>
-        <div class="time_line available_time flex flex-row gap-2">
-          <div class="available_time text-white"> 11:00
+    <div class='sm:mx-auto sm:w-full sm:max-w-[1296px] sm:px-5'>
+      <div class="md:grid grid-cols-6 gap-4 sm:min-h-[85vh] sm:py-[55px] justify-center">
+        <div class="col-span-2 h-full min-h-full hidden sm:flex justify-center items-start pt-5 sm:pb-5 md:pb-0">
+          <div
+            class="sm:rounded-[50px] sm:shadow-md sm:w-7/12 md:w-11/12 sm:border-2 sm:h-fit sm:border-orange-500 sm:flex flex-col items-center justify-center sm:px-3 lg:px-8 sm:py-5">
+            <div class="flex flex-col justify-center items-center mb-4">
+              <div class="w-[90px] h-[90px] rounded-full">
+                <img class="h-full w-full overflow-hidden" src="img/image.png" alt="" />
+              </div>
+              <div class="flex gap-2 justify-center items-center px-2 py-1 rounded-full border border-orange-500 mt-2">
+                <p class="font-medium text-[15px] text-gradient">
+                  5.0
+                </p>
+                <img src="img/rating-5.png" alt="" />
+              </div>
+              <h1 class="font-semibold text-2xl text-gradient">Teacher's name</h1>
+              <p class="text-gradient text-sm font-normal">teacher@gmail.com</p>
+              <p class="text-[#585858] font-medium">Country: <span class="font-normal text-[#585858]">India</span> City: <span class="font-normal text-[#585858]">Delhi</span></p>
+              <p class="text-[#585858] font-medium">Timezone: <span class="font-normal text-[#585858]">Asia/Kolkata</span></p>
+            </div>
+            <div class="flex flex-col gap-4 items-center justify-center sm:w-full px-8 sm:px-0">
+              <button type="submit" class="mr-3 sm:mr-0 bg-gradient rounded-full text-white py-2 px-4 w-full">
+                Book a Call
+              </button>
+              <button type="submit" class="mr-3 sm:mr-0 bg-gradient rounded-full text-white py-2 px-4 w-full">
+                Book a Conference
+              </button>
+            </div>
           </div>
-          <hr class="flex-grow font-bold">
-          <span class="available_time text-white text-sm font-medium min-w-[100px]">Price: ₹ 300</span>
-          <button class="text-[#585858] text-[8px] bg-white rounded-[25px] px-2 py-2 justify-end min-w-[64px]">Book Now</button>
         </div>
-        <div class="time_line">
-          <div class="available_time"> 12:00 </div>
-          <hr />
-        </div>
-        <div class="time_line">
-          <div class="available_time"> 13:00 </div>
-          <hr />
-        </div>
-        <div class="time_line">
-          <div class="available_time"> 14:00 </div>
-          <hr />
-        </div>
-        <div class="time_line">
-          <div class="available_time"> 15:00 </div>
-          <hr />
-        </div>
-        <div class="time_line">
-          <div class="available_time"> 16:00 </div>
-          <hr />
-        </div>
-        <div class="time_line">
-          <div class="available_time"> 17:00 </div>
-          <hr />
-        </div>
-        <div class="time_line">
-          <div class="available_time"> 18:00 </div>
-          <hr />
-        </div>
-      </div>
+        <div class="col-span-4">
+          <div>
+            <div class="sm:hidden bg-contain bg-cover bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full sm:max-w-md"
+              style="background-image: url('./img/background-2.png')">
+              <div class="flex justify-center items-center pt-[52px]">
+                <img src="img/logo.png" alt="logo" />
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-[68px] mt-[-65px] sm:mt-10 mb-[30px]">
+              <!-- style="display: flex; justify-content: center; align-items: center; gap:68px; margin-top: -65px;  margin-bottom: 30px;" -->
+              <span style="color: #AFAFAF; font-weight: 600;">Week</span>
+              <h1 id="month-header">Month</h1>
+            </div>
+          </div>
+          <div class="sm:shadow-md sm:rounded-[50px] xl:grid grid-cols-2 md:px-5 md:h-fit md:py-5">
+            <div class="flex xl:flex-col justify-center xl:justify-start items-center">
+              <h1 id="month_header"
+                class="hidden xl:block mb-5 px-[25px] py-[15px] shadow-md rounded-full text-[#585858] text-lg font-bold">
+                Month</h1>
+              <div id="calendar" class="card shadow-md xl:shadow-none rounded-[50px] pb-5 w-[450px] lg:w-auto">
+                <!-- Calendar content will be dynamically added here -->
+              </div>
+            </div>
+            <!-- I did not see any use for it in here -->
+            <!-- <div class="flex justify-center mt-5">
+              <div class=" flex">
+                <button class="active" style="background: linear-gradient(
+                    180deg,
+                    #ff6535 0%,
+                    #ff9e48 48.9%,
+                    #ffce58 100%
+                      );color: #fff;font-weight: 600;padding: 5px 30px; border-radius: 20px 0px 0px 20px;">Calls</button>
+                <button class="inactive"><span>Conferences</span></button>
+              </div>
+            </div> -->
+            <div>
+              <div class="flex flex-col items-start" style="margin-top: 20px;margin-left: 10%;">
 
-    </div>
-    <div class="relative z-50 flex justify-center">
-      <div style="
-              background: linear-gradient(
-                180deg,
-                #ff6535 0%,
-                #ff9e48 48.9%,
-                #ffce58 100%
-              );
-              position: fixed;
-              bottom: 0;
-            "
-        class="flex flex-row justify-between shadow-md items-center px-[32px] rounded-[100px] w-10/12 h-[64px] mb-3">
-        <img src="img/search-active.png" alt="" />
-        <img src="img/4.png" alt="" />
-        <img src="img/chat-inactive.png" alt="" />
-        <img src="img/dots-inactive.png" />
+                <div id="short_date_form"></div>
+                <span style="font-size: 13px;color: #AFAFAF;">Daily Tasks</span>
+
+              </div>
+              <div class="flex justify-start" style="gap: 50px;margin-top: 10px; margin-left: 10%;">
+
+                <!-- <div class="flex justify-center items-center" style="gap:10px;">
+                    <span style="color:#585858; font-size: 13px;">Share availability </span>
+                    <i class="bi bi-reply-fill" style="transform: rotateY(180deg); color:#585858; font-size: 20px;"></i>
+                  </div>-->
+              </div>
+              <div style="height: 450px;">
+                <!-- removed mrgin-left: -2%; -->
+                <div class="time_lines overflow-y-auto">
+                  <div class="time_line ">
+                    <div class="available_time"> 8:00 </div>
+                    <hr />
+                  </div>
+                  <div class="time_line booked_time">
+                    <div class="available_time"> 9:00 </div>
+                    <hr />
+                  </div>
+                  <div class="time_line available_time flex flex-row gap-2">
+                    <div class="available_time text-white"> 11:00
+                    </div>
+                    <hr class="flex-grow font-bold">
+                    <span class="available_time text-white text-sm font-medium min-w-[100px]">Price: ₹ 300</span>
+                    <button
+                      class="text-[#585858] text-[8px] bg-white rounded-[25px] px-2 py-2 justify-end min-w-[64px]">Book
+                      Now</button>
+                  </div>
+                  <div class="time_line">
+                    <div class="available_time"> 12:00 </div>
+                    <hr />
+                  </div>
+                  <div class="time_line">
+                    <div class="available_time"> 13:00 </div>
+                    <hr />
+                  </div>
+                  <div class="time_line">
+                    <div class="available_time"> 14:00 </div>
+                    <hr />
+                  </div>
+                  <div class="time_line">
+                    <div class="available_time"> 15:00 </div>
+                    <hr />
+                  </div>
+                  <div class="time_line">
+                    <div class="available_time"> 16:00 </div>
+                    <hr />
+                  </div>
+                  <div class="time_line">
+                    <div class="available_time"> 17:00 </div>
+                    <hr />
+                  </div>
+                  <div class="time_line">
+                    <div class="available_time"> 18:00 </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   </section>
+  <!-- menu component -->
+  <div class="sm:hidden fixed left-0 right-0 bottom-0 z-50 flex justify-center w-10/12 mx-auto">
+    <div
+      class="flex flex-row justify-between shadow-md items-center px-[32px] rounded-[100px] w-full h-[64px] mb-3 bg-gradient">
+      <img src="img/search-active.png" alt="" />
+      <img src="img/4.png" alt="" />
+      <img src="img/chat-inactive.png" alt="" />
+      <img src="img/dots-inactive.png" />
+    </div>
+  </div>
 </body>
 
 </html>
