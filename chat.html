@@ -9,185 +9,249 @@
 </head>
 
 <body>
-    <div class='flex flex-col gap-2 font-primary items-center min-h-screen'>
-        <!-- header background section -->
-        <div class="bg-contain bg-no-repeat w-screen h-[280px] min-w-screen fixed top-0"
-            style="background-image: url('./img/background-2.png')">
-            <div class="flex justify-center items-center pt-[48px]">
-                <img src="./img/logo.png" alt="logo" class='' />
+    <section class="mb-40 sm:mb-0">
+        <nav class="hidden sm:flex items-center justify-center h-[96px] w-full bg-gradient px-5 lg:px-[72px]">
+            <div
+                class="w-full max-w-[1300px] mx-auto sm:flex flex-wrap md:gap-10 items-center justify-center lg:justify-between">
+                <div class="hidden lg:block">
+                    <img class="w-[308px]" src="img/logo.png" alt="logo" />
+                </div>
+                <div class="flex items-center justify-center gap-8">
+                    <img class="cursor-pointer" src="img/desktop_search_icon.png" alt="">
+                    <img class="cursor-pointer" src="img/desktop_calander_icon.png" alt="">
+                    <img class="cursor-pointer" src="img/desktop_chat_icon.png" alt="">
+                    <img class="cursor-pointer" src="img/desktop_group_icon.png" alt="">
+                    <img class="cursor-pointer" src="img/desktop_profile_icon.png" alt="">
+                    <img class="cursor-pointer" src="img/desktop_notificaiton_icon.png" alt="">
+                    <img class="cursor-pointer" src="img/desktop_logout_icon.png" alt="">
+                </div>
+            </div>
+        </nav>
+        <div class='sm:mx-auto sm:w-full sm:max-w-[1296px] sm:px-5'>
+            <!-- header background section -->
+            <div class="sm:hidden bg-contain bg-cover bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full"
+                style="background-image: url('./img/background-2.png')">
+                <div class="flex justify-center items-center pt-[52px]">
+                    <img src="img/logo.png" alt="logo" />
+                </div>
+            </div>
+            <!-- search messages section fixed-->
+            <div class='mt-[-60px] sm:mt-[68px] flex flex-col sm:flex-row items-left sm:items-center sm:justify-center mx-6 sm:mx-auto gap-2 sm:w-full max-w-[1000px]'>
+                <div class='mt-2 sm:hidden'>
+                    <p class='text-left text-[22px] text-[#585858] font-semibold'>Messages</p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-start mb-2 sm:mb-[18px] sm:w-full">
+                    <form action="#" method="POST" class="mb-2 sm:mb-0 sm:w-full sm:flex sm:gap-4 items-center justify-center">
+                        <div class="relative border-[#AFAFAF] flex-grow">
+                            <div class="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
+                                <img src="img/sarch.png" alt="" />
+                            </div>
+                            <input type="text"
+                                class="pl-10 pr-4 py-3 border border-[#AFAFAF] text-md w-full rounded-full min-w-[300px]"
+                                placeholder="Search Chats" aria-label="Search Chats" value="" />
+                        </div>
+                        <button type="submit"
+                            class="hidden sm:block bg-gradient rounded-full text-white py-3 px-4 w-full max-w-[106px]">
+                            Go
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- Display chats section scrollable -->
+            <div class="md:grid grid-cols-3 gap-4 sm:min-h-[85vh] sm:py-[55px] justify-center">
+                <div
+                    class="h-full sm:rounded-[25px] sm:shadow-md min-h-full hidden sm:flex justify-center items-start pt-5 sm:pb-5 md:pb-0">
+                    <div
+                        class="sm:rounded-[50px] sm:shadow-md sm:w-7/12 md:w-11/12 sm:border-2 sm:h-[352px] sm:border-orange-500 sm:flex flex-col items-center justify-center sm:px-3 lg:px-8">
+                        <div class="flex flex-col justify-center items-center mb-4">
+                            <img src="img/Vector (1).png" alt="" />
+                            <h1 class="font-semibold text-2xl text-[#585858]">Name</h1>
+                            <p class="text-[#afafaf] text-sm font-normal">Student</p>
+                        </div>
+                        <div class="sm:flex items-center justify-center sm:w-full px-8 sm:px-0">
+                            <button type="submit"
+                                class="mr-3 sm:mr-0 bg-gradient rounded-full text-white py-2 px-4 w-full">
+                                Go to detailed search
+                            </button>
+                        </div>
+                        <div
+                            class="flex flex-row gap-2 items-center justify-center mt-4 pb-9 shadow-md px-8 sm:px-0 sm:shadow-none rounded-b-[50px] sm:rounded-b-none w-full">
+                            <form action="#" method="POST" class="w-full">
+                                <div>
+                                    <div class="relative mt-1 ">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
+                                            <img src="img/sarch.png" alt="" />
+                                        </div>
+                                        <input type="text"
+                                            class="pl-10 pr-4 py-3 border border-[#585858] text-sm w-full rounded-full"
+                                            placeholder="Search by name" />
+                                    </div>
+                                </div>
+
+                            </form>
+                            <button type="submit"
+                                class="mr-3 bg-gradient rounded-full text-white py-3 px-4 w-2/12 sm:w-4/12">
+                                Go
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-y-auto shadow-lg rounded-[50px] py-2 mx-auto sm:mx-0 w-11/12 sm:w-auto col-span-2 sm:h-full sm:rounded-[25px] sm:shadow-md min-h-full sm:mt-6 md:mt-0"
+                    id="chats">
+                    <div
+                        class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
+                        <div class="flex items-center">
+                            <img src="img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
+                            <div class="ml-[10px]">
+                                <div class="flex flex-row gap-1 items-center">
+                                    <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
+                                    <span class="bg-red-500 w-[6px] h-[6px] rounded-[100px] "></span>
+                                </div>
+                                <p class="font-normal text-[11px] text-[#afafaf]">
+                                    Dorem ipsum dolor sit amet, <br />
+                                    consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
+                        <div class="flex items-center">
+                            <img src="img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
+                            <div class="ml-[10px]">
+                                <div class="flex flex-row gap-1 items-center">
+                                    <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
+                                    <span class="bg-green-500 w-[6px] h-[6px] rounded-[100px] "></span>
+                                </div>
+                                <p class="font-normal text-[11px] text-[#afafaf]">
+                                    Dorem ipsum dolor sit amet, <br />
+                                    consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
+                        <div class="flex items-center">
+                            <img src="img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
+                            <div class="ml-[10px]">
+                                <div class="flex flex-row gap-1 items-center">
+                                    <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
+                                    <span class="bg-red-500 w-[6px] h-[6px] rounded-[100px] "></span>
+                                </div>
+                                <p class="font-normal text-[11px] text-[#afafaf]">
+                                    Dorem ipsum dolor sit amet, <br />
+                                    consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
+                        <div class="flex items-center">
+                            <img src="img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
+                            <div class="ml-[10px]">
+                                <div class="flex flex-row gap-1 items-center">
+                                    <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
+                                    <!-- <span class="bg-green-500 w-[6px] h-[6px] rounded-[100px] "></span> -->
+                                </div>
+                                <p class="font-normal text-[11px] text-[#afafaf]">
+                                    Dorem ipsum dolor sit amet, <br />
+                                    consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
+                        <div class="flex items-center">
+                            <img src="img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
+                            <div class="ml-[10px]">
+                                <div class="flex flex-row gap-1 items-center">
+                                    <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
+                                    <!-- <span class="bg-green-500 w-[6px] h-[6px] rounded-[100px] "></span> -->
+                                </div>
+                                <p class="font-normal text-[11px] text-[#afafaf]">
+                                    Dorem ipsum dolor sit amet, <br />
+                                    consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
+                        <div class="flex items-center">
+                            <img src="img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
+                            <div class="ml-[10px]">
+                                <div class="flex flex-row gap-1 items-center">
+                                    <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
+                                    <span class="bg-green-500 w-[6px] h-[6px] rounded-[100px] "></span>
+                                </div>
+                                <p class="font-normal text-[11px] text-[#afafaf]">
+                                    Dorem ipsum dolor sit amet, <br />
+                                    consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
+                        <div class="flex items-center">
+                            <img src="img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
+                            <div class="ml-[10px]">
+                                <div class="flex flex-row gap-1 items-center">
+                                    <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
+                                    <span class="bg-green-500 w-[6px] h-[6px] rounded-[100px] "></span>
+                                </div>
+                                <p class="font-normal text-[11px] text-[#afafaf]">
+                                    Dorem ipsum dolor sit amet, <br />
+                                    consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- search messages section fixed-->
-        <div class='flex flex-col fixed items-left top-[160px] mx-6 gap-2'>
-            <div class='mt-2'>
-                <p class='text-left text-[22px] text-[#585858] font-semibold'>Messages</p>
-            </div>
-            <div class="flex flex-col sm:flex-row items-center justify-between sm:px-12 mb-2 sm:mb-[18px]">
-                <form action="#" method="POST" class="mb-2 sm:mb-0 sm:mr-12 sm:w-1/2">
-                    <div class="relative border-[#AFAFAF]">
-                        <div class="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
-                            <img src="./img/sarch.png" alt="" />
-                        </div>
-                        <input type="text"
-                            class="pl-10 pr-4 py-3 border border-[#AFAFAF] text-md w-full rounded-full min-w-[300px]"
-                            placeholder="Search Chats" aria-label="Search Chats" value="" />
-                    </div>
-                </form>
-            </div>
+    </section>
+    <!-- menu component -->
+    <div class="sm:hidden fixed left-0 right-0 bottom-0 z-50 flex justify-center w-10/12 mx-auto">
+        <div
+            class="flex flex-row justify-between shadow-md items-center px-[32px] rounded-[100px] w-full h-[64px] mb-3 bg-gradient">
+            <img src="img/search-active.png" alt="" />
+            <img src="img/4.png" alt="" />
+            <img src="img/chat-inactive.png" alt="" />
+            <img src="img/dots-inactive.png" />
         </div>
-        <!-- Display chats section scrollable -->
-        <div class="overflow-y-auto shadow-lg mt-[280px] rounded-[50px] py-2 w-11/12" id="chats"
-            style="max-height: calc(100vh - 364px);">
-            <div class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
-                <div class="flex items-center">
-                    <img src="./img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
-                    <div class="ml-[10px]">
-                        <div class="flex flex-row gap-1 items-center">
-                            <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
-                            <span class="bg-red-500 w-[6px] h-[6px] rounded-[100px] "></span>
-                        </div>
-                        <p class="font-normal text-[11px] text-[#afafaf]">
-                            Dorem ipsum dolor sit amet, <br />
-                            consectetur adipiscing elit.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-center items-center">
-                    <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
-                </div>
-            </div>
-            <div class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
-                <div class="flex items-center">
-                    <img src="./img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
-                    <div class="ml-[10px]">
-                        <div class="flex flex-row gap-1 items-center">
-                            <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
-                            <span class="bg-green-500 w-[6px] h-[6px] rounded-[100px] "></span>
-                        </div>
-                        <p class="font-normal text-[11px] text-[#afafaf]">
-                            Dorem ipsum dolor sit amet, <br />
-                            consectetur adipiscing elit.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-center items-center">
-                    <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
-                </div>
-            </div>
-            <div class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
-                <div class="flex items-center">
-                    <img src="./img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
-                    <div class="ml-[10px]">
-                        <div class="flex flex-row gap-1 items-center">
-                            <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
-                            <span class="bg-red-500 w-[6px] h-[6px] rounded-[100px] "></span>
-                        </div>
-                        <p class="font-normal text-[11px] text-[#afafaf]">
-                            Dorem ipsum dolor sit amet, <br />
-                            consectetur adipiscing elit.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-center items-center">
-                    <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
-                </div>
-            </div>
-            <div class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
-                <div class="flex items-center">
-                    <img src="./img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
-                    <div class="ml-[10px]">
-                        <div class="flex flex-row gap-1 items-center">
-                            <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
-                            <!-- <span class="bg-green-500 w-[6px] h-[6px] rounded-[100px] "></span> -->
-                        </div>
-                        <p class="font-normal text-[11px] text-[#afafaf]">
-                            Dorem ipsum dolor sit amet, <br />
-                            consectetur adipiscing elit.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-center items-center">
-                    <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
-                </div>
-            </div>
-            <div class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
-                <div class="flex items-center">
-                    <img src="./img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
-                    <div class="ml-[10px]">
-                        <div class="flex flex-row gap-1 items-center">
-                            <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
-                            <!-- <span class="bg-green-500 w-[6px] h-[6px] rounded-[100px] "></span> -->
-                        </div>
-                        <p class="font-normal text-[11px] text-[#afafaf]">
-                            Dorem ipsum dolor sit amet, <br />
-                            consectetur adipiscing elit.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-center items-center">
-                    <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
-                </div>
-            </div>
-            <div class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
-                <div class="flex items-center">
-                    <img src="./img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
-                    <div class="ml-[10px]">
-                        <div class="flex flex-row gap-1 items-center">
-                            <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
-                            <span class="bg-green-500 w-[6px] h-[6px] rounded-[100px] "></span>
-                        </div>
-                        <p class="font-normal text-[11px] text-[#afafaf]">
-                            Dorem ipsum dolor sit amet, <br />
-                            consectetur adipiscing elit.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-center items-center">
-                    <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
-                </div>
-            </div>
-            <div class="flex items-center pl-[10px] py-[10px] px-4 justify-between mx-5 mb-2 border-b border-[#e2e2e2]">
-                <div class="flex items-center">
-                    <img src="./img/454.png" alt="" class="w-[40px] h-[40px] mr-0.5" />
-                    <div class="ml-[10px]">
-                        <div class="flex flex-row gap-1 items-center">
-                            <h1 class="font-semibold text-[#585858] text-[14px]">Name</h1>
-                            <span class="bg-green-500 w-[6px] h-[6px] rounded-[100px] "></span>
-                        </div>
-                        <p class="font-normal text-[11px] text-[#afafaf]">
-                            Dorem ipsum dolor sit amet, <br />
-                            consectetur adipiscing elit.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-center items-center">
-                    <p class="font-medium text-[15px] text-[#afafaf]">00:45</p>
-                </div>
-            </div>
-        </div>
-        <!-- Menu Bottom Section Fixed -->
-        <div style="
-                background: linear-gradient(
-                  180deg,
-                  #ff6535 0%,
-                  #ff9e48 48.9%,
-                  #ffce58 100%
-                ); position: fixed; bottom: 0;
-              "
-            class="flex flex-row justify-between shadow-md items-center px-[32px] rounded-[100px] w-10/12 h-[64px] mb-3">
-            <img src="./img/search.png" alt="">
-            <img src="./img/4.png" alt="" />
-            <img src="./img/1.png" alt="" />
-            <img src="./img/dots-inactive.png" />
-        </div>
-    </div>
     </div>
 </body>
 

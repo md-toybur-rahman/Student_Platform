@@ -8,110 +8,177 @@
   <link rel="stylesheet" href="./dist/output.css" />
 </head>
 
-<body class="font-primary">
-  <section>
-    <div>
-      <div class="bg-contain bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full sm:max-w-md"
-        style="background-image: url('./img/background-2.png')">
-        <div class="flex justify-center items-center pt-[52px]">
-          <img src="./img/logo.png" alt="logo" />
+<body class="font-primary min-h-[100vh]">
+  <section class="mb-40 sm:mb-0">
+    <nav class="hidden sm:flex items-center justify-center h-[96px] w-full bg-gradient px-5 lg:px-[72px]">
+      <div
+        class="w-full max-w-[1300px] mx-auto sm:flex flex-wrap md:gap-10 items-center justify-center lg:justify-between">
+        <div class="hidden lg:block">
+          <img class="w-[308px]" src="img/logo.png" alt="logo" />
+        </div>
+        <div class="flex items-center justify-center gap-8">
+          <img class="cursor-pointer" src="img/desktop_search_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_calander_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_chat_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_group_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_profile_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_notificaiton_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_logout_icon.png" alt="">
         </div>
       </div>
-      <div class="sm:mx-auto sm:w-full sm:max-w-[480px] mb-8">
-        <div class="mt-[-140px]">
-          <div class="flex items-center justify-center px-8 mt-8 pb-9 shadow-md rounded-b-full">
-            <form class="flex-col mr-3 items-center">
-              <div class="flex items-center">
-                <div class="mr-2">
-                  <div class="relative mt-1">
-                    <div class="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
-                      <img src="./img/sarch.png" />
+    </nav>
+    <div>
+      <div class="sm:hidden bg-contain bg-cover bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full sm:max-w-md"
+        style="background-image: url('./img/background-2.png')">
+        <div class="flex justify-center items-center pt-[52px]">
+          <img src="img/logo.png" alt="logo" />
+        </div>
+      </div>
+      <div class="sm:mx-auto sm:w-full  sm:max-w-[1296px] sm:px-5 mb-8">
+        <div class="mt-[-80px] sm:mt-0 md:grid grid-cols-3 gap-4 sm:min-h-[85vh] sm:py-[55px]">
+          <div
+            class="flex sm:flex-col items-center justify-center sm:justify-start px-8 sm:px-0 mt-8 sm:mt-0 pb-9 shadow-md rounded-b-[50px] sm:pt-5">
+            <div
+              class="sm:rounded-[50px] sm:shadow-md sm:w-7/12 md:w-11/12 sm:border-2 sm:h-[281px] sm:border-orange-500 sm:flex flex-col items-center justify-center sm:px-3 lg:px-8">
+              <div class="hidden sm:flex flex-col justify-center items-center mb-4">
+                <img src="img/Vector (1).png" alt="" />
+                <h1 class="font-semibold text-2xl text-[#585858]">Name</h1>
+                <p class="text-[#afafaf] text-sm font-normal">Student</p>
+              </div>
+              <form class="flex-col mr-3 items-center">
+                <div class="flex items-center">
+                  <div class="mr-2">
+                    <div class="relative mt-1">
+                      <div class="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
+                        <img src="img/sarch.png" />
+                      </div>
+                      <input type="text" class="pl-10 pr-4 py-3 border border-[#585858] text-sm w-full rounded-full"
+                        placeholder="Search by name" />
                     </div>
-                    <input type="text" class="pl-10 pr-4 py-3 border border-[#585858] text-sm w-full rounded-full"
-                      placeholder="Search by name" />
                   </div>
+                  <button type="submit" class="bg-gradient text-white rounded-full px-6 py-2">
+                    Go
+                  </button>
                 </div>
-                <button type="submit" class="bg-gradient text-white rounded-full px-3 py-2">
-                  Go
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <div class="px-6">
-            <div class="text-[14px] my-4 font-semibold text-[#585858]">
-              Search by :
+              </form>
             </div>
-
-            <div class="flex flex-wrap">
-              <div class="text-[12px]">
-                <select name="category" class="max-w-[150px] text-white bg-gradient px-2 py-1 rounded-full mb-1 mr-1">
-                  <option class="w-[100%]" selected value="">
-                    Select a category
-                  </option>
-                  <option value="Pre-School">Pre-School</option>
-                  <option value="High-School">High School</option>
-                  <option value="Middle School">Middle School</option>
-                  <option value="Bachelor's Degree">Bachelor's Degree</option>
-                </select>
+            <div class="px-6 hidden sm:block">
+              <div class="text-[14px] my-4 font-semibold text-[#585858]">
+                Search by :
               </div>
 
-              <div class="text-[12px]">
-                <select name="subCategory"
-                  class="max-w-[160px] text-white bg-gradient px-2 py-1 rounded-full mb-1 mr-1">
-                  <option class="w-[100%]" selected value="">
-                    Select a sub-category
-                  </option>
-                  <option value="Pre-School">Pre-School</option>
-                  <option value="High-School">High School</option>
-                  <option value="Middle School">Middle School</option>
-                  <option value="Bachelor's Degree">Bachelor's Degree</option>
-                </select>
-              </div>
+              <div class="flex flex-wrap">
+                <div class="text-[12px]">
+                  <select name="category" class="max-w-[150px] text-white bg-gradient px-2 py-1 rounded-full mb-1 mr-1">
+                    <option class="w-[100%]" selected value="">
+                      Select a category
+                    </option>
+                    <option value="Pre-School">Pre-School</option>
+                    <option value="High-School">High School</option>
+                    <option value="Middle School">Middle School</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                  </select>
+                </div>
 
-              <div class="text-[12px]">
-                <select name="country" class="max-w-[150px] text-white bg-gradient px-2 py-1 rounded-full mb-1 mr-1">
-                  <option class="w-[100%]" selected value="">
-                    Select a country
-                  </option>
-                  <option value="India">India</option>
-                  <option value="USA">USA</option>
-                  <option value="Singapore">Singapore</option>
-                  <option value="Brazil">Brazil</option>
-                </select>
+                <div class="text-[12px]">
+                  <select name="subCategory"
+                    class="max-w-[160px] text-white bg-gradient px-2 py-1 rounded-full mb-1 mr-1">
+                    <option class="w-[100%]" selected value="">
+                      Select a sub-category
+                    </option>
+                    <option value="Pre-School">Pre-School</option>
+                    <option value="High-School">High School</option>
+                    <option value="Middle School">Middle School</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                  </select>
+                </div>
+
+                <div class="text-[12px]">
+                  <select name="country" class="max-w-[150px] text-white bg-gradient px-2 py-1 rounded-full mb-1 mr-1">
+                    <option class="w-[100%]" selected value="">
+                      Select a country
+                    </option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Brazil">Brazil</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
-          <div class="text-[14px] mx-6 my-4 font-semibold text-[#585858]">
-            Search results :
-          </div>
-          <div class="overflow-y-auto flex flex-col items-center" style="max-height: calc(100vh - 200px);">
-            <img src="./img/no-results.png" alt="">
-          </div>
+          <div class="col-span-2 sm:h-full sm:rounded-[25px] sm:shadow-md min-h-full sm:px-3 md:px-5">
+            <div class="px-6 sm:hidden">
+              <div class="text-[14px] my-4 font-semibold text-[#585858]">
+                Search by :
+              </div>
 
-          <!-- menu component -->
-          <div class="relative z-50 flex justify-center">
-            <div style="
-                  background: linear-gradient(
-                    180deg,
-                    #ff6535 0%,
-                    #ff9e48 48.9%,
-                    #ffce58 100%
-                  );
-                  position: fixed;
-                  bottom: 0;
-                "
-              class="flex flex-row justify-between shadow-md items-center px-[32px] rounded-[100px] w-10/12 h-[64px] mb-3">
-              <img src="./img/search-active.png" alt="" />
-              <img src="./img/4.png" alt="" />
-              <img src="./img/chat-inactive.png" alt="" />
-              <img src="./img/dots-inactive.png" />
+              <div class="flex flex-wrap">
+                <div class="text-[12px]">
+                  <select name="category" class="max-w-[150px] text-white bg-gradient px-2 py-1 rounded-full mb-1 mr-1">
+                    <option class="w-[100%]" selected value="">
+                      Select a category
+                    </option>
+                    <option value="Pre-School">Pre-School</option>
+                    <option value="High-School">High School</option>
+                    <option value="Middle School">Middle School</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                  </select>
+                </div>
+
+                <div class="text-[12px]">
+                  <select name="subCategory"
+                    class="max-w-[160px] text-white bg-gradient px-2 py-1 rounded-full mb-1 mr-1">
+                    <option class="w-[100%]" selected value="">
+                      Select a sub-category
+                    </option>
+                    <option value="Pre-School">Pre-School</option>
+                    <option value="High-School">High School</option>
+                    <option value="Middle School">Middle School</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                  </select>
+                </div>
+
+                <div class="text-[12px]">
+                  <select name="country" class="max-w-[150px] text-white bg-gradient px-2 py-1 rounded-full mb-1 mr-1">
+                    <option class="w-[100%]" selected value="">
+                      Select a country
+                    </option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Brazil">Brazil</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="pb-20">
+              <div class="text-[14px] sm:text-[20px] mx-6 my-4 font-semibold text-[#585858]">
+                Search results :
+              </div>
+              <div class="flex flex-col items-center justify-center gap-5 mt-[56px]">
+                <img class="w-[50px] sm:w-auto" src="img/no_result_icon.png" alt="">
+                <h1 class="text-sm sm:text-[23px] font-medium text-[#585858] text-center">Sorry no matching results
+                  found. <br>Try
+                  something else.</h1>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- menu component -->
+  <div class="sm:hidden fixed left-0 right-0 bottom-0 z-50 flex justify-center w-10/12 mx-auto">
+    <div
+      class="flex flex-row justify-between shadow-md items-center px-[32px] rounded-[100px] w-full h-[64px] mb-3 bg-gradient">
+      <img src="img/search-active.png" alt="" />
+      <img src="img/4.png" alt="" />
+      <img src="img/chat-inactive.png" alt="" />
+      <img src="img/dots-inactive.png" />
+    </div>
+  </div>
 </body>
 
 </html>

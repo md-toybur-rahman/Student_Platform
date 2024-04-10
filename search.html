@@ -8,22 +8,22 @@
   <link rel="stylesheet" href="./dist/output.css" />
 </head>
 
-<body class="font-primary max-w-[1440px] mx-auto min-h-[100vh]">
-  <section>
+<body class="font-primary min-h-[100vh]">
+  <section class="mb-40 sm:mb-0">
     <nav
       class="hidden sm:flex items-center justify-center h-[96px] w-full bg-gradient px-5 lg:px-[72px]">
       <div class="w-full max-w-[1300px] mx-auto sm:flex flex-wrap md:gap-10 items-center justify-center lg:justify-between">
         <div class="hidden lg:block">
-          <img class="w-[308px]" src="./img/logo.png" alt="logo" />
+          <img class="w-[308px]" src="img/logo.png" alt="logo" />
         </div>
         <div class="flex items-center justify-center gap-8">
-          <img src="img/desktop_search_icon.png" alt="">
-          <img src="img/desktop_calander_icon.png" alt="">
-          <img src="img/desktop_chat_icon.png" alt="">
-          <img src="img/desktop_group_icon.png" alt="">
-          <img src="img/desktop_profile_icon.png" alt="">
-          <img src="img/desktop_notificaiton_icon.png" alt="">
-          <img src="img/desktop_logout_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_search_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_calander_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_chat_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_group_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_profile_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_notificaiton_icon.png" alt="">
+          <img class="cursor-pointer" src="img/desktop_logout_icon.png" alt="">
         </div>
       </div>
     </nav>
@@ -31,7 +31,7 @@
       <div class="sm:hidden bg-contain bg-cover bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full sm:max-w-md"
         style="background-image: url('./img/background-2.png')">
         <div class="flex justify-center items-center pt-[52px]">
-          <img src="./img/logo.png" alt="logo" />
+          <img src="img/logo.png" alt="logo" />
         </div>
       </div>
       <div class="sm:mx-auto sm:w-full  sm:max-w-[1296px] sm:px-5 mb-8">
@@ -39,7 +39,7 @@
           <div class="flex sm:flex-col items-center justify-center sm:justify-start px-8 sm:px-0 mt-8 sm:mt-0 pb-9 shadow-md rounded-b-[50px] sm:pt-5">
             <div class="sm:rounded-[50px] sm:shadow-md sm:w-7/12 md:w-11/12 sm:border-2 sm:h-[281px] sm:border-orange-500 sm:flex flex-col items-center justify-center sm:px-3 lg:px-8">
               <div class="flex flex-col justify-center items-center mb-4">
-                <img src="./img/Vector (1).png" alt="" />
+                <img src="img/Vector (1).png" alt="" />
                 <h1 class="font-semibold text-2xl text-[#585858]">Name</h1>
                 <p class="text-[#afafaf] text-sm font-normal">Student</p>
               </div>
@@ -48,7 +48,7 @@
                   <div class="mr-2">
                     <div class="relative mt-1">
                       <div class="absolute inset-y-0 left-0 pl-[15px] flex items-center pointer-events-none">
-                        <img src="./img/sarch.png" />
+                        <img src="img/sarch.png" />
                       </div>
                       <input type="text" class="pl-10 pr-4 py-3 border border-[#585858] text-sm w-full rounded-full"
                         placeholder="Search by name" />
@@ -153,16 +153,12 @@
             <div class="text-[14px] sm:text-[20px] mx-6 my-4 font-semibold text-[#585858]">
               Search results :
             </div>
-            <div class="hidden sm:flex flex-col items-center justify-center gap-5 mt-[56px]">
-              <img src="img/no_result_icon.png" alt="">
-              <h1 class="text-[23px] font-medium text-[#585858] text-center">Sorry no matching results found. <br>Try something else.</h1>
-            </div>
-            <div class="overflow-y-auto sm:hidden" style="max-height: calc(100vh - 200px);">
+            <div class="overflow-y-auto" style="max-height: calc(100vh - 200px);">
 
               <div
                 class="flex flex-row justify-between shadow-md rounded-full mx-[6px] pl-[10px] py-[10px] px-4 relative z-5 mb-2">
                 <div class="flex items-center  items-center gap-2  ">
-                  <img src="./img/454.png" alt="" />
+                  <img src="img/454.png" alt="" />
                   <div class="">
                     <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
                       Teacher’s name
@@ -176,7 +172,7 @@
 
                 </div>
                 <div class="flex flex-col justify-center items-center">
-                  <img src="./img/rating-5.png" alt="" />
+                  <img src="img/rating-5.png" alt="" />
                   <p class="font-medium text-[15px]" style="
                         background: linear-gradient(
                           180deg,
@@ -194,7 +190,7 @@
               <div
                 class="flex flex-row justify-between shadow-md rounded-full mx-[6px] pl-[10px] py-[10px] px-4 relative z-5 mb-2">
                 <div class="flex items-center  items-center gap-2  ">
-                  <img src="./img/454.png" alt="" />
+                  <img src="img/454.png" alt="" />
                   <div class="">
                     <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
                       Teacher’s name
@@ -208,7 +204,7 @@
 
                 </div>
                 <div class="flex flex-col justify-center items-center">
-                  <img src="./img/rating-5.png" alt="" />
+                  <img src="img/rating-5.png" alt="" />
                   <p class="font-medium text-[15px]" style="
                         background: linear-gradient(
                           180deg,
@@ -226,7 +222,7 @@
               <div
                 class="flex flex-row justify-between shadow-md rounded-full mx-[6px] pl-[10px] py-[10px] px-4 relative z-5 mb-2">
                 <div class="flex items-center  items-center gap-2  ">
-                  <img src="./img/454.png" alt="" />
+                  <img src="img/454.png" alt="" />
                   <div class="">
                     <h1 class="font-semibold text-[#585858] text-sm sm:text-base">
                       Teacher’s name
@@ -240,7 +236,7 @@
 
                 </div>
                 <div class="flex flex-col justify-center items-center">
-                  <img src="./img/rating-5.png" alt="" />
+                  <img src="img/rating-5.png" alt="" />
                   <p class="font-medium text-[15px]" style="
                         background: linear-gradient(
                           180deg,
@@ -259,19 +255,19 @@
           </div>
         </div>
 
-        <!-- menu component -->
-        <div class="sm:hidden relative z-50 flex justify-center">
-          <div
-            class="flex flex-row justify-between shadow-md items-center px-[32px] rounded-[100px] w-10/12 h-[64px] mb-3 bg-gradient">
-            <img src="./img/search-active.png" alt="" />
-            <img src="./img/4.png" alt="" />
-            <img src="./img/chat-inactive.png" alt="" />
-            <img src="./img/dots-inactive.png" />
-          </div>
-        </div>
       </div>
     </div>
   </section>
+  <!-- menu component -->
+  <div class="sm:hidden fixed left-0 right-0 bottom-0 z-50 flex justify-center w-10/12 mx-auto">
+    <div
+      class="flex flex-row justify-between shadow-md items-center px-[32px] rounded-[100px] w-full h-[64px] mb-3 bg-gradient">
+      <img src="img/search-active.png" alt="" />
+      <img src="img/4.png" alt="" />
+      <img src="img/chat-inactive.png" alt="" />
+      <img src="img/dots-inactive.png" />
+    </div>
+  </div>
 </body>
 
 </html>
