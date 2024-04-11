@@ -133,11 +133,7 @@
   }
 
   #month-header {
-    background: linear-gradient(180deg,
-        #ff6535 0%,
-        #ff9e48 48.9%,
-        #ffce58 100%);
-    color: white;
+    background-color: white;
     padding: 5px 27px;
     border-radius: 20px;
     font-weight: 500;
@@ -204,7 +200,7 @@
     gap: 20px;
     /* margin-left: 10%; */
     border-radius: 20px;
-    padding: 5px 16px;
+    padding: 5px 10px;
     margin-bottom: 10px;
     color: #000;
   }
@@ -226,15 +222,14 @@
 
   hr {
     display: block;
-    width: 80%;
+    width: auto;
     height: 1px;
   }
 
   .time_lines {
-    height: 300px;
-    overflow-y: scroll;
+    /* height: 300px; */
+    /* overflow-y: scroll; */
     margin-bottom: 30px;
-    padding: 0 20px;
   }
 
   .overflow-y-auto::-webkit-scrollbar {
@@ -317,6 +312,94 @@
     font-size: 20px;
     font-weight: 700;
   }
+
+  .react-calendar {
+    width: 449px; /* changed by toybur */
+    min-width: 340px; /* changed by toybur */
+    margin-top: 5px;
+    height: 400px;
+    max-width: 100%;
+    background-color: #fff;
+    color: #222;
+    border-radius: 8px;
+    /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); */
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+  }
+
+  .react-calendar__month-view__weekdays {
+    /* display: flex;
+    justify-content: space-around; */
+    display: grid; /* changed by toybur*/
+    grid-template-columns: repeat(7, 1fr); /* changed by toybur*/
+    /* Changed to space-around for equal spacing */
+    margin-bottom: 10px;
+    /* Added margin bottom for separation */
+
+  }
+
+  .react-calendar__month-view__weekdays span {
+    font-weight: bold;
+    /* width: 14.28%; */ /* removed by toybur */
+    /* Adjusted width to match the number of days */
+    text-align: center;
+  }
+
+  .react-calendar__month-view__days {
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid; /* changed by toybur */
+    grid-template-columns: repeat(7, 1fr); /* changed by toybur */
+    justify-content: space-around;
+  }
+
+  .react-calendar__month-view__days__day {
+    /* width: 14.28%; */ /* removed by toybur */
+    width: 40px; /* changed by toybur */
+    height: 40px; /* changed by toybur */
+    display: flex; /* changed by toybur */
+    align-items: center; /* changed by toybur */
+    justify-content: center; /* changed by toybur */
+    /* Adjust to fit 7 days in a row */
+    text-align: center;
+    line-height: 3.7rem;
+    margin: 8px;/* changed by toybur */
+    /* Added margin bottom for separation */
+  }
+  /* changed by toybur */
+  @media screen and (max-width: 420px) {
+    .react-calendar__month-view__days__day{
+      margin:3px;
+    }
+    
+  }
+  /* end changed from toybur */
+  .react-calendar__month-view__days__day--weekend {
+    color: white;
+    background-color: #f3c699;
+    border-radius: 50%;
+  }
+
+  .react-calendar__month-view__days__day--weekend:hover,
+  .react-calendar__month-view__days__day--weekend:focus {
+    background-color: #f3c699;
+  }
+
+  .react-calendar__month-view__days__day--neighboringMonth {
+    background-color: #f1f1f1;
+    color: #afafaf;
+    border-radius: 50%;
+  }
+
+  .react-calendar__tile--now {
+    background: linear-gradient(180deg, #ff6535 0%, #ff9e48 48.9%, #ffce58 100%);
+    color: white;
+    border-radius: 100%;
+    font-weight: bold;
+  }
+
+  /* Styles for active and disabled days */
+  /* Add more styles as needed */
 </style>
 
 <body class="font-primary min-h-[100vh]">
@@ -339,7 +422,7 @@
       </div>
     </nav>
     <div class='sm:mx-auto sm:w-full sm:max-w-[1296px] sm:px-5'>
-      <div class="md:grid grid-cols-6 gap-4 sm:min-h-[85vh] sm:py-[55px] justify-center">
+      <div class="md:grid grid-cols-6 xl:grid-cols-8 gap-4 sm:min-h-[85vh] sm:py-[55px] justify-center">
         <div class="col-span-2 h-full min-h-full hidden sm:flex justify-center items-start pt-5 sm:pb-5 md:pb-0">
           <div
             class="sm:rounded-[50px] sm:shadow-md sm:w-7/12 md:w-11/12 sm:border-2 sm:h-fit sm:border-orange-500 sm:flex flex-col items-center justify-center sm:px-3 lg:px-8 sm:py-5">
@@ -355,8 +438,11 @@
               </div>
               <h1 class="font-semibold text-2xl text-gradient">Teacher's name</h1>
               <p class="text-gradient text-sm font-normal">teacher@gmail.com</p>
-              <p class="text-[#585858] font-medium">Country: <span class="font-normal text-[#585858]">India</span> City: <span class="font-normal text-[#585858]">Delhi</span></p>
-              <p class="text-[#585858] font-medium">Timezone: <span class="font-normal text-[#585858]">Asia/Kolkata</span></p>
+              <p class="text-[#585858] font-medium">Country: <span class="font-normal text-[#585858]">India</span> City:
+                <span class="font-normal text-[#585858]">Delhi</span>
+              </p>
+              <p class="text-[#585858] font-medium">Timezone: <span
+                  class="font-normal text-[#585858]">Asia/Kolkata</span></p>
             </div>
             <div class="flex flex-col gap-4 items-center justify-center sm:w-full px-8 sm:px-0">
               <button type="submit" class="mr-3 sm:mr-0 bg-gradient rounded-full text-white py-2 px-4 w-full">
@@ -368,7 +454,7 @@
             </div>
           </div>
         </div>
-        <div class="col-span-4">
+        <div class="col-span-4 xl:col-span-6">
           <div>
             <div class="sm:hidden bg-contain bg-cover bg-no-repeat w-full h-[280px] sm:mx-auto sm:w-full sm:max-w-md"
               style="background-image: url('./img/background-2.png')">
@@ -376,19 +462,99 @@
                 <img class="w-[189px]" src="img/logo.png" alt="logo" />
               </div>
             </div>
-            <div class="flex items-center justify-center gap-[68px] mt-[-65px] sm:mt-10 mb-[30px]">
-              <!-- style="display: flex; justify-content: center; align-items: center; gap:68px; margin-top: -65px;  margin-bottom: 30px;" -->
-              <span style="color: #AFAFAF; font-weight: 600;">Week</span>
-              <h1 id="month-header">Month</h1>
+            <div class="flex flex-col sm:flex-row items-start gap-5 pt-5">
+              <div class="flex flex-row items-center gap-2 mt-[-50px] sm:mt-0 ml-2">
+                <img src="./img/left.png" alt="" class="w-4 h-4">
+                <span class="text-[#afafaf] text-[16px] md:text-lg font-medium">Back</span>
+              </div>
+
+              <div class="flex-grow text-center w-full flex flex-col items-center my-2 font-semibold text-gradient text-lg md:text-xl">
+                <span>Book a call now! </span>
+                <span>Resolve your doubts and learn more</span>
+              </div>
             </div>
           </div>
           <div class="sm:shadow-md sm:rounded-[50px] xl:grid grid-cols-2 md:px-5 md:h-fit md:py-5">
             <div class="flex xl:flex-col justify-center xl:justify-start items-center">
-              <h1 id="month_header"
+              <h1 id="month-header"
                 class="hidden xl:block mb-5 px-[25px] py-[15px] shadow-md rounded-full text-[#585858] text-lg font-bold">
                 Month</h1>
-              <div id="calendar" class="card shadow-md xl:shadow-none rounded-[50px] pb-5 w-full max-w-[450px] sm:max-w-none sm:w-auto">
-                <!-- Calendar content will be dynamically added here -->
+              <!-- calendar -->
+              <div class="flex justify-center items-center w-full">
+
+                <div class="react-calendar">
+                  <div class="react-calendar__month-view__weekdays">
+                    <span>Mo</span>
+                    <span>Tu</span>
+                    <span>We</span>
+                    <span>Th</span>
+                    <span>Fr</span>
+                    <span>Sa</span>
+                    <span>Su</span>
+                  </div>
+                  <div class="react-calendar__month-view__days ">
+                    <div class="react-calendar__month-view__days__day">1</div>
+                    <div class="react-calendar__month-view__days__day">2</div>
+                    <div class="react-calendar__month-view__days__day">3</div>
+                    <div class="react-calendar__month-view__days__day">4</div>
+                    <div class="react-calendar__month-view__days__day">5</div>
+                    <div class="react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend">6
+                    </div>
+                    <div class="react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend">7
+                    </div>
+                    <div class="react-calendar__month-view__days__day">8</div>
+                    <div class="react-calendar__month-view__days__day">9</div>
+                    <div class="react-calendar__month-view__days__day">10</div>
+                    <div class="react-calendar__month-view__days__day react-calendar__tile--now ">11</div>
+                    <div class="react-calendar__month-view__days__day">12</div>
+                    <div class="react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend">13
+                    </div>
+                    <div class="react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend">14
+                    </div>
+                    <div class="react-calendar__month-view__days__day">15</div>
+                    <div class="react-calendar__month-view__days__day">16</div>
+                    <div class="react-calendar__month-view__days__day">17</div>
+                    <div class="react-calendar__month-view__days__day">18</div>
+                    <div class="react-calendar__month-view__days__day">19</div>
+                    <div class="react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend">20
+                    </div>
+                    <div class="react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend">21
+                    </div>
+                    <div class="react-calendar__month-view__days__day">22</div>
+                    <div class="react-calendar__month-view__days__day">23</div>
+                    <div class="react-calendar__month-view__days__day">24</div>
+                    <div class="react-calendar__month-view__days__day">25</div>
+                    <div class="react-calendar__month-view__days__day">27</div>
+                    <div class="react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend">28
+                    </div>
+                    <div class="react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend">29
+                    </div>
+                    <div class="react-calendar__month-view__days__day">30</div>
+                    <div class="react-calendar__month-view__days__day">31</div>
+                    <div
+                      class="react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth">
+                      1
+                    </div>
+                    <div
+                      class="react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth">
+                      2
+                    </div>
+                    <div
+                      class="react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth">
+                      3
+                    </div>
+                    <div
+                      class="react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth">
+                      4
+                    </div>
+                    <div
+                      class="react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth">
+                      5
+                    </div>
+
+                  </div>
+                </div>
+
               </div>
             </div>
             <!-- I did not see any use for it in here -->
@@ -408,14 +574,8 @@
 
                 <div id="short_date_form"></div>
                 <span style="font-size: 13px;color: #AFAFAF;">Daily Tasks</span>
-
               </div>
               <div class="flex justify-start" style="gap: 50px;margin-top: 10px; margin-left: 10%;">
-
-                <!-- <div class="flex justify-center items-center" style="gap:10px;">
-                    <span style="color:#585858; font-size: 13px;">Share availability </span>
-                    <i class="bi bi-reply-fill" style="transform: rotateY(180deg); color:#585858; font-size: 20px;"></i>
-                  </div>-->
               </div>
               <div style="height: 450px;">
                 <!-- removed mrgin-left: -2%; -->
@@ -425,11 +585,11 @@
                     <hr />
                   </div>
                   <div class="time_line booked_time">
-                    <div class="available_time"> 9:00 </div>
+                    <div class="available_time">09:00 - 10:00 </div>
                     <hr />
                   </div>
                   <div class="time_line available_time flex flex-row gap-2">
-                    <div class="available_time text-white"> 11:00
+                    <div class="available_time text-white"> 11:00-12:00
                     </div>
                     <hr class="flex-grow font-bold">
                     <span class="available_time text-white text-sm font-medium min-w-[100px]">Price: ₹ 300</span>
