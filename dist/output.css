@@ -734,6 +734,10 @@ video {
   top: 50%;
 }
 
+.top-2{
+  top: 0.5rem;
+}
+
 .top-\[-128px\]{
   top: -128px;
 }
@@ -772,10 +776,6 @@ video {
 
 .order-2{
   order: 2;
-}
-
-.order-4{
-  order: 4;
 }
 
 .order-first{
@@ -921,6 +921,10 @@ video {
 
 .mb-20{
   margin-bottom: 5rem;
+}
+
+.mb-28{
+  margin-bottom: 7rem;
 }
 
 .mb-3{
@@ -1133,14 +1137,6 @@ video {
 
 .mt-\[56px\]{
   margin-top: 56px;
-}
-
-.mb-80{
-  margin-bottom: 20rem;
-}
-
-.mb-28{
-  margin-bottom: 7rem;
 }
 
 .box-border{
@@ -1369,6 +1365,10 @@ video {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[450px\]{
+  height: 450px;
 }
 
 .min-h-\[100vh\]{
@@ -1642,6 +1642,10 @@ video {
 
 .max-w-\[480px\]{
   max-width: 480px;
+}
+
+.max-w-\[625px\]{
+  max-width: 625px;
 }
 
 .max-w-\[683px\]{
@@ -2241,10 +2245,6 @@ video {
 
 .gap-5{
   gap: 1.25rem;
-}
-
-.gap-6{
-  gap: 1.5rem;
 }
 
 .gap-7{
@@ -4367,12 +4367,20 @@ video {
     margin-left: 0px;
   }
 
+  .sm\:ml-\[-62px\]{
+    margin-left: -62px;
+  }
+
   .sm\:mr-0{
     margin-right: 0px;
   }
 
   .sm\:mt-0{
     margin-top: 0px;
+  }
+
+  .sm\:mt-14{
+    margin-top: 3.5rem;
   }
 
   .sm\:mt-5{
@@ -4397,10 +4405,6 @@ video {
 
   .sm\:mt-\[68px\]{
     margin-top: 68px;
-  }
-
-  .sm\:mt-\[\]{
-    margin-top: ;
   }
 
   .sm\:block{
@@ -4454,6 +4458,10 @@ video {
 
   .sm\:h-full{
     height: 100%;
+  }
+
+  .sm\:h-\[496px\]{
+    height: 496px;
   }
 
   .sm\:min-h-\[85vh\]{
@@ -4540,6 +4548,10 @@ video {
     max-width: 28rem;
   }
 
+  .sm\:max-w-none{
+    max-width: none;
+  }
+
   .sm\:grid-cols-6{
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
@@ -4550,6 +4562,10 @@ video {
 
   .sm\:flex-col{
     flex-direction: column;
+  }
+
+  .sm\:items-start{
+    align-items: flex-start;
   }
 
   .sm\:items-center{
@@ -5016,6 +5032,10 @@ video {
     width: 1.75rem;
   }
 
+  .lg\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -5049,6 +5069,10 @@ video {
 }
 
 @media (min-width: 1280px){
+  .xl\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+
   .xl\:col-span-6{
     grid-column: span 6 / span 6;
   }

@@ -19,5 +19,9 @@
 
 8 made a section for weekdays replace "react-calendar__month-view__weekdays". but i didn't used that. if you want, you can use that. i left that as a comment.
 
+9. Added claender in conference page.
+
+10. Please Fixed the button which made for calls and conference in conference page.
+
 
  -->
