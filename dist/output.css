@@ -774,6 +774,10 @@ video {
   order: 2;
 }
 
+.order-4{
+  order: 4;
+}
+
 .order-first{
   order: -9999;
 }
@@ -886,6 +890,11 @@ video {
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .my-4{
@@ -1126,6 +1135,14 @@ video {
   margin-top: 56px;
 }
 
+.mb-80{
+  margin-bottom: 20rem;
+}
+
+.mb-28{
+  margin-bottom: 7rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1335,6 +1352,11 @@ video {
 
 .h-\[96px\]{
   height: 96px;
+}
+
+.h-fit{
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-full{
@@ -1620,6 +1642,10 @@ video {
 
 .max-w-\[480px\]{
   max-width: 480px;
+}
+
+.max-w-\[683px\]{
+  max-width: 683px;
 }
 
 .max-w-xs{
@@ -2215,6 +2241,10 @@ video {
 
 .gap-5{
   gap: 1.25rem;
+}
+
+.gap-6{
+  gap: 1.5rem;
 }
 
 .gap-7{
@@ -3232,6 +3262,10 @@ video {
 .py-\[30px\]{
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.pb-2{
+  padding-bottom: 0.5rem;
 }
 
 .pb-20{
@@ -4365,6 +4399,10 @@ video {
     margin-top: 68px;
   }
 
+  .sm\:mt-\[\]{
+    margin-top: ;
+  }
+
   .sm\:block{
     display: block;
   }
@@ -4572,6 +4610,10 @@ video {
     border-width: 2px;
   }
 
+  .sm\:border-none{
+    border-style: none;
+  }
+
   .sm\:border-orange-500{
     --tw-border-opacity: 1;
     border-color: rgb(249 115 22 / var(--tw-border-opacity));
@@ -4674,6 +4716,10 @@ video {
 
   .sm\:pt-\[50px\]{
     padding-top: 50px;
+  }
+
+  .sm\:text-left{
+    text-align: left;
   }
 
   .sm\:text-center{
@@ -4792,8 +4838,16 @@ video {
     display: block;
   }
 
+  .md\:flex{
+    display: flex;
+  }
+
   .md\:grid{
     display: grid;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:h-11{
@@ -4825,12 +4879,24 @@ video {
     width: 64px;
   }
 
+  .md\:max-w-\[137px\]{
+    max-width: 137px;
+  }
+
   .md\:max-w-\[615px\]{
     max-width: 615px;
   }
 
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:justify-start{
+    justify-content: flex-start;
   }
 
   .md\:justify-center{
@@ -4853,8 +4919,17 @@ video {
     border-radius: 50px;
   }
 
+  .md\:p-6{
+    padding: 1.5rem;
+  }
+
   .md\:p-\[60px\]{
     padding: 60px;
+  }
+
+  .md\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md\:px-10{
@@ -4888,6 +4963,14 @@ video {
 
   .md\:pt-\[100px\]{
     padding-top: 100px;
+  }
+
+  .md\:text-left{
+    text-align: left;
+  }
+
+  .md\:text-start{
+    text-align: start;
   }
 
   .md\:text-2xl{

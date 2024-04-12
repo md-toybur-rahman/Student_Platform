@@ -15,5 +15,9 @@
 
 6. made more 2 line in js in calanderScript.js for get month name.
 
+7. Changed Calander style and used comment by my name Toybur for all of styles property.
+
+8 made a section for weekdays replace "react-calendar__month-view__weekdays". but i didn't used that. if you want, you can use that. i left that as a comment.
+
 
  -->
