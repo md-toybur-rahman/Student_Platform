@@ -23,5 +23,9 @@
 
 10. Please Fixed the button which made for calls and conference in conference page.
 
+11. Made gradient checkbox for edit profile page.
+
+12. Cearfully check forum page. there have an extra section. that made for desktop design.line no 48-92.
+
 
  -->
