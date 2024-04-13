@@ -164,3 +164,49 @@
 </body>
 
 </html>
+
+
+
+
+<form method='POST'
+  class="w-full fixed top-0 left-0 z-50  h-full flex justify-center items-center bg-black bg-opacity-50">
+  <div class="bg-white p-6 rounded-lg w-11/12">
+    <h2 class="text-[20px] font-semibold mb-4 text-gradient">Create Post</h2>
+    <input type="text" placeholder="Post Title"
+      class="mb-2 w-full border border-gray-300 rounded-md p-2 focus:outline-none" />
+    <textarea name="" id="" placeholder="Content"
+      class="mb-2 w-full border border-gray-300 rounded-md p-2 focus:outline-none" rows="4"></textarea>
+    <select class="mb-2 w-full border border-gray-300 rounded-md p-2 focus:outline-none">
+      <option value="" selected disabled>Select Category</option>
+      <!-- Categories options here -->
+      <option value="Preschool">Preschool/Kindergarten</option>
+      <option value="Middle School">Middle School</option>
+      <option value="High School">High School</option>
+      <option value="Vocational Trainings/ Job Oriented Training">Vocational
+        Trainings/ Job Oriented Training</option>
+      <option value="Bachelor's Degree">Bachelor's Degree</option>
+    </select>
+
+    <select class="mb-2 w-full border border-gray-300 rounded-md p-2 focus:outline-none">
+      <option value="" selected disabled>Select a course</option>
+      <!-- Categories options here -->
+      <option value="Preschool">Preschool/Kindergarten</option>
+      <option value="Middle School">Middle School</option>
+      <option value="High School">High School</option>
+      <option value="Vocational Trainings/ Job Oriented Training">Vocational
+        Trainings/ Job Oriented Training</option>
+      <option value="Bachelor's Degree">Bachelor's Degree</option>
+    </select>
+
+    <div class='flex flex-col gap-2'>
+      <input type="file" accept="image/*" class="border border-gray-300 px-2 py-2 text-gray-400 text-left rounded-md" />
+      <div class='flex flex-row items-center'>
+        <button type="submit" class="text-white px-4 py-2 rounded-md bg-gradient">Create</button>
+
+        <button type="button" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md ml-2">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</form>
